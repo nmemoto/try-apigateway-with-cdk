@@ -1,0 +1,19 @@
+{
+    "name": "try-apigateway-with-cdk",
+    "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-16",
+    "mounts": [
+        "source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind"
+    ],
+    "features": {
+        "common": {
+            "username": "vscode"
+        },
+        "docker-from-docker": {
+            "version": "latest"
+        },
+        "golang": "latest",
+        "aws-cli": "latest"
+    },
+    "remoteUser": "vscode",
+    "postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh"
+}
